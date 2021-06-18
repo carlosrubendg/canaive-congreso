@@ -42,12 +42,13 @@ header {
 	z-index: 101;
     font-size: 1.8rem;
     top: 0;
-    -webkit-box-shadow: 0px 2px 2px 0px rgba(38, 50, 56, 0.5);
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(38, 50, 56, 0.5);
     box-shadow: 0px 1px 2px 0px rgba(38, 50, 56, 0.5);
 }
 
 nav img {
-	height: 75px;
+	max-width: 250px;
+    max-height: 75px;
 }
 
 nav ul {
@@ -202,15 +203,58 @@ main {
 .footer {
 	width: 100%;
 	height: 100px;
+    padding: 0 100px;
 	background-color: #eceff1;
 	display: flex;
-    -webkit-box-shadow: 0px 2px 2px 0px rgba(38, 50, 56, 0.5);
+    -webkit-box-shadow: 0px -1px 2px 0px rgba(38, 50, 56, 0.5);
     box-shadow: 0px -1px 2px 0px rgba(38, 50, 56, 0.5);
+    align-items: center;
+}
+
+.footer--logo {
+    width: 20%;
+    height: 80%;
+}
+
+.footer--logo img {
+    height: 100%;
+    display: flex;
+    filter: invert(100%);
+}
+
+.footer--info {
+    width: 80%;
+    font-size: 1.4rem;
+    color: #263238;
+}
+
+
+.footer--info i:first-child {
+    padding: 0;
+}
+
+.footer--info i {
+    padding-left: 10px;
+}
+
+.footer__social-networks {
+    width: 20%;
+}
+
+.footer__social-networks a {
+    color: #263238;
+    text-decoration: none;
+    padding-right: 10px;
+}
+
+.footer__social-networks a:last-child {
+    padding: 0;
 }
 
 @media only screen and (max-width: 768px) {
     header {
         justify-content: center;
+        padding: 0 40px;
     }
 
     nav ul {
@@ -260,5 +304,22 @@ main {
 
     .main__form #smart-button-container {
         width: 100%;
+    }
+
+    .footer {
+        padding: 0 40px;
+    }
+
+    .footer--logo {
+        display: none;
+    }
+
+    .footer--info {
+        display: none;
+    }
+
+    .footer__social-networks {
+        width: auto;
+        margin: auto;
     }
 }
